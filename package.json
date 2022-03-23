@@ -1,0 +1,26 @@
+{
+  "name": "beautiful-nature",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "compile:sass": "node-sass sass/main.scss css/style.comp.css",
+    "concat:css": "concat -o css/style.concat.css css/styles.css css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 1 version' css/style.concat.css -o css/style.prefix.css",
+    "compress:css": "node-sass css/style.concat.css css/style.css --output-style compressed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.4",
+    "concat": "^1.0.3",
+    "node-sass": "^7.0.1",
+    "postcss-cli": "^9.1.0"
+  },
+  "dependencies": {
+    "gitignore": "^0.7.0"
+  }
+}

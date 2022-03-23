@@ -1,0 +1,64 @@
+
+// Animations Start
+
+@keyframes moveIn-Left {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    75% {
+      opacity: 0.6;
+      transform: translateX(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes moveIn-right {
+    0% {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+    75% {
+      opacity: 0.6;
+      transform: translateX(-30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* button animation */
+  
+  @keyframes moveInBottom {
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .btn_animate{
+    animation: moveInBottom 2s ease 1s backwards;
+  }
+
+  @keyframes moveup {
+    0% {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .animate_up{
+    animation: moveup 2s ease 0.2s backwards;
+  }

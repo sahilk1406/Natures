@@ -1,0 +1,95 @@
+
+/* hover effect */
+.btn,
+.btn:link,
+.btn:visited {
+  position: relative;
+  text-transform: uppercase;
+  padding: 1.5rem 4rem;
+  border-radius: 9px;
+  display: inline-block;
+  transition: all 0.2s;
+  font-weight: bold;
+
+  //changes for form button
+  border:none;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba($black, 0.2);
+
+    &::after {
+      transform: scale(1.4, 2);
+      opacity: 0;
+    }
+  }
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba($black, 0.2);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 9px;
+    transition: all 0.4s;
+    display: inline-block;
+    z-index: -1;
+  }
+  
+}
+
+.btn_white {
+  background-color: $color_white;
+  color: $dark_grey;
+
+  &::after {
+    background-color: $color_white;
+  }
+}
+
+.btn_purple {
+  background-color: $color-primary-dark;
+  color: $color_white;
+
+  &::after {
+    background-color: $color-primary-dark;
+  }
+}
+
+
+.btn_text{
+
+    &:link,
+    &:visited{
+      // display: inline;
+      color: #3a13ac;
+      border-bottom: 1px solid #3a13ac;
+      padding: 1rem 2rem;
+      transition: all 0.3s ease;
+      font-size:1.6rem;
+      width: 23%;
+    }
+
+    &:hover{
+      background-color:$color-primary-darker;
+      border-radius: 5px;
+      color: $color-white;
+      transform: translateY(-2px);
+      box-shadow: 0 1rem 1.5rem rgba(0,0,0,0.3);
+    }
+
+    &:active
+    {
+      box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+      transform: translateY(0);
+    }
+}
+

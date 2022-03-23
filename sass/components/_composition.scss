@@ -1,0 +1,61 @@
+
+    .composition{
+
+        position:relative;
+
+        &:hover &__photo:not(:hover){
+            transform:scale(0.95)
+        }
+
+        .composition__photo{
+
+            width: 55%;
+            box-shadow: 0 1.5rem 4rem 0 rgba($black,0.4);
+            border-radius: 5px;
+            position: absolute; 
+            transition: all 0.3s ease;
+            outline-offset: 2rem;
+
+            @include respond(phone){
+                width: 50%;
+            }
+
+            &--img1{
+                left: 0;
+                top: -2rem;
+
+                @include respond(phone){
+                    left: 3rem;
+                }
+            }
+    
+            &--img2{
+                right: 0;
+                top: 4rem;
+
+                @include respond(phone){
+                    right: 3rem;
+                }
+            }
+    
+            &--img3{
+                left: 16%;
+                top: 14rem;
+
+                @include respond(phone){
+                    top: 10rem;
+                }
+            }
+
+            &:hover{
+                transform: scale(1.2);
+                outline: 15px solid $color-primary-light;
+                z-index: 1000;
+                box-shadow: 0 2.5rem 4rem rgba($black,0.5);
+            }
+        }
+
+       
+    }
+
+  
